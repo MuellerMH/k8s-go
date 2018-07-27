@@ -13,3 +13,17 @@
 [prune]
   go-tests = true
   unused-packages = true
+
+# the following overrides are necessary to enforce the given version, even though our
+# code does not import the packages directly.
+[[override]]
+  name = "k8s.io/api"
+  version = "kubernetes-1.10.0"
+
+[[override]]
+  name = "k8s.io/apimachinery"
+  version = "kubernetes-1.10.0"
+
+[[override]]
+  name = "k8s.io/client-go"
+  version = "7.0.0"

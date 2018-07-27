@@ -4,8 +4,7 @@ import (
 	"flag"
 	"fmt"
 	"os"
-	// the following line is needed to make dep work, just ignore it:
-	_ "k8s.io/api/core/v1"
+
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/tools/clientcmd"
