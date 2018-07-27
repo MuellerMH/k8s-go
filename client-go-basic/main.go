@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"os"
 	// the following line is needed to make dep work, just ignore it:
@@ -11,27 +12,28 @@ import (
 )
 
 func main() {
-	pl, _ := listpods()
-	fmt.Println(pl)
+	nodes, _ := listnodes()
+	fmt.Println(nodes)
 }
 
-func listpods() ([]string, error) {
-	var po []string
-	config, err := clientcmd.BuildConfigFromFlags("", os.Getenv("HOME")+"/.kube/config")
+func listnodes() ([]string, error) {
+	var nodes []string
+	kubeconfig := flag.String("kubeconfig", os.Getenv("HOME")+"/.kube/config", "path to the kubeconfig file to use")
+	flag.Parse()
+	config, err := clientcmd.BuildConfigFromFlags("", *kubeconfig)
 	if err != nil {
-		return po, err
+		return nodes, err
 	}
-	cs, err := kubernetes.NewForConfig(config)
+	clientset, err := kubernetes.NewForConfig(config)
 	if err != nil {
-		return po, err
+		return nodes, err
 	}
-	namespace := "ucg-test"
-	pods, err := cs.CoreV1().Pods(namespace).List(metav1.ListOptions{})
+	nodelist, err := clientset.CoreV1().Nodes().List(metav1.ListOptions{})
 	if err != nil {
-		return po, err
+		return nodes, err
 	}
-	for _, p := range pods.Items {
-		po = append(po, p.GetName())
+	for _, n := range nodelist.Items {
+		nodes = append(nodes, n.GetName())
 	}
-	return po, nil
+	return nodes, nil
 }
