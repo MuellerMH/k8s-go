@@ -111,7 +111,7 @@
     "unix",
     "windows"
   ]
-  revision = "e072cadbbdc8dd3d3ffa82b8b4b9304c261d9311"
+  revision = "bd9dbc187b6e1dacfdd2722a87e83093c2d7bd6e"
 
 [[projects]]
   name = "golang.org/x/text"
@@ -288,6 +288,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "599ad8ad5c906984eec67dcc50d8f9eaf828cc6ff227c8cda03f5dd058963784"
+  inputs-digest = "f66926c8313c182271b42211826862c732779ad5072767ff817e2e82545befb0"
   solver-name = "gps-cdcl"
   solver-version = 1
