@@ -1,0 +1,59 @@
+# the follow is required to pull in code-generators
+required = [
+    "k8s.io/code-generator/cmd/deepcopy-gen",
+    "k8s.io/code-generator/cmd/client-gen",
+    "k8s.io/code-generator/cmd/lister-gen",
+    "k8s.io/code-generator/cmd/informer-gen",
+]
+
+[[constraint]]
+  name = "k8s.io/client-go"
+  version = "7.0.0"
+
+[[constraint]]
+  name = "k8s.io/api"
+  version = "kubernetes-1.10.0"
+
+[[constraint]]
+  name = "k8s.io/apimachinery"
+  version = "kubernetes-1.10.0"
+
+[prune]
+  go-tests = true
+
+# the following is necessary to keep the bash files in k8s.io/code-generator
+[[prune.project]]
+  name = "k8s.io/code-generator"
+  non-go = false
+  unused-packages = false
+
+# the following is necessary to keep the client-go and api packages for easier development
+[[prune.project]]
+  name = "k8s.io/api"
+  unused-packages = false
+
+[[prune.project]]
+  name = "k8s.io/client-go"
+  unused-packages = false
+
+[[prune.project]]
+  name = "k8s.io/apimachinery"
+  unused-packages = false
+
+# the following overrides are necessary to enforce the given version, even though our
+# code does not import the packages directly yet.
+[[override]]
+  name = "k8s.io/api"
+  version = "kubernetes-1.10.0"
+
+[[override]]
+  name = "k8s.io/apimachinery"
+  version = "kubernetes-1.10.0"
+
+[[override]]
+  name = "k8s.io/client-go"
+  version = "7.0.0"
+
+[[override]]
+  name = "k8s.io/code-generator"
+  version = "kubernetes-1.10.0"
