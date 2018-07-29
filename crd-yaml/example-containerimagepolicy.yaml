@@ -1,0 +1,18 @@
+apiVersion: policy.k8s-go.openshift.org/v1alpha1
+kind: ContainerImagePolicy
+metadata:
+  name: example
+spec:
+  require:
+    explicitRegistry: true
+    imageRegex: "^inhouse-[a-z0-9]+-"
+  labels:
+    pods: invalid-container-image
+  action: "delete" # or "label"
+status:
+  statistics:
+    pods:
+      imagesWithoutRegistry: 7
+      invalidImages: 3
+      passed: 42
+  lastChecked: "So 29 Jul 2018 09:13:07 CEST"

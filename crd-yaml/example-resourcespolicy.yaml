@@ -1,0 +1,19 @@
+apiVersion: policy.k8s-go.openshift.org/v1alpha1
+kind: ResourcesPolicy
+metadata:
+  name: example
+spec:
+  require:
+    limits: true
+    requests: true
+    requestsLowerThanLimits: true
+  labels:
+    pods: resources-wrong
+status:
+  statistics:
+    pods:
+      missingLimits: 7
+      missingRequests: 3
+      requestEqualLimits: 1
+      passed: 42
+  lastChecked: "So 29 Jul 2018 09:13:07 CEST"
