@@ -43,7 +43,7 @@ func watchpods() {
 		time.Sleep(time.Second * 5)
 		pod, err := podInformer.Lister().Pods("default").Get("shell")
 		if err != nil {
-			fmt.Println(fmt.Errorf("Can't get updates on pod `shell`: %v", err))
+			fmt.Println(fmt.Errorf("Can't get updates: %v", err))
 			continue
 		}
 		fmt.Printf("Labels of pod `shell`: %v\n", pod.GetLabels())
