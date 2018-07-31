@@ -160,7 +160,10 @@ func (c *Controller) syncHandler(key string) error {
 
 		return err
 	}
-	original := policy.DeepCopy()
+
+	// keep original, and deep copy policy before mutating it
+	original := policy
+	policy = policy.DeepCopy()
 
 	// #########################################
 	// # TODO: add controller logic here
