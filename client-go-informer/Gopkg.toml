@@ -12,19 +12,7 @@
 
 [prune]
   go-tests = true
-
-# the following is necessary to keep the client-go and api packages for easier development
-[[prune.project]]
-  name = "k8s.io/api"
-  unused-packages = false
-
-[[prune.project]]
-  name = "k8s.io/client-go"
-  unused-packages = false
-
-[[prune.project]]
-  name = "k8s.io/apimachinery"
-  unused-packages = false
+  unused-packages = true
 
 # the following overrides are necessary to enforce the given version, even though our
 # code does not import the packages directly yet.
