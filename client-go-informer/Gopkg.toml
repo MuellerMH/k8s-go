@@ -12,7 +12,6 @@
 
 [prune]
   go-tests = true
-  unused-packages = true
 
 # the following overrides are necessary to enforce the given version, even though our
 # code does not import the packages directly yet.
