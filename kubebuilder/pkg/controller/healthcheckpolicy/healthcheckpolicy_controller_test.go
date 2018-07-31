@@ -21,7 +21,7 @@ import (
 	"time"
 
 	"github.com/onsi/gomega"
-	policyv1beta1 "github.com/openshift/k8s-go/kubebuilder/pkg/apis/policy/v1beta1"
+	policyv1beta1 "github.com/openshift-talks/k8s-go/kubebuilder/pkg/apis/policy/v1beta1"
 	"golang.org/x/net/context"
 	appsv1 "k8s.io/api/apps/v1"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"

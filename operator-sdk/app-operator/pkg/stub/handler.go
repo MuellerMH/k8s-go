@@ -3,7 +3,7 @@ package stub
 import (
 	"context"
 
-	"github.com/openshift/k8s-go/operator-sdk/app-operator/pkg/apis/policy/v1beta1"
+	"github.com/openshift-talks/k8s-go/operator-sdk/app-operator/pkg/apis/policy/v1beta1"
 
 	"github.com/operator-framework/operator-sdk/pkg/sdk"
 	"github.com/sirupsen/logrus"

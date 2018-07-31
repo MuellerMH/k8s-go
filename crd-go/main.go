@@ -11,7 +11,7 @@ import (
 	// Required to authenticate against GKE clusters
 	_ "k8s.io/client-go/plugin/pkg/client/auth/gcp"
 
-	"github.com/openshift/k8s-go/crd-go/pkg/generated/clientset/versioned"
+	"github.com/openshift-talks/k8s-go/crd-go/pkg/generated/clientset/versioned"
 )
 
 func main() {

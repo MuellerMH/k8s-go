@@ -3,8 +3,8 @@
 package policy
 
 import (
-	internalinterfaces "github.com/openshift/k8s-go/controller/pkg/generated/informers/externalversions/internalinterfaces"
-	v1alpha1 "github.com/openshift/k8s-go/controller/pkg/generated/informers/externalversions/policy/v1alpha1"
+	internalinterfaces "github.com/openshift-talks/k8s-go/controller/pkg/generated/informers/externalversions/internalinterfaces"
+	v1alpha1 "github.com/openshift-talks/k8s-go/controller/pkg/generated/informers/externalversions/policy/v1alpha1"
 )
 
 // Interface provides access to each of this group's versions.

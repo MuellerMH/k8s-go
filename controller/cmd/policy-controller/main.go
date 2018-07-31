@@ -15,9 +15,9 @@ import (
 	// Required to authenticate against GKE clusters
 	_ "k8s.io/client-go/plugin/pkg/client/auth/gcp"
 
-	"github.com/openshift/k8s-go/controller/cmd/policy-controller/controller"
-	policyclientset "github.com/openshift/k8s-go/controller/pkg/generated/clientset/versioned"
-	policyinformers "github.com/openshift/k8s-go/controller/pkg/generated/informers/externalversions"
+	"github.com/openshift-talks/k8s-go/controller/cmd/policy-controller/controller"
+	policyclientset "github.com/openshift-talks/k8s-go/controller/pkg/generated/clientset/versioned"
+	policyinformers "github.com/openshift-talks/k8s-go/controller/pkg/generated/informers/externalversions"
 )
 
 var (

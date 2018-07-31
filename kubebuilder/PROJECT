@@ -1,3 +1,3 @@
 version: "1"
 domain: k8s-go.openshift.org
-repo: github.com/openshift/k8s-go/kubebuilder
+repo: github.com/openshift-talks/k8s-go/kubebuilder

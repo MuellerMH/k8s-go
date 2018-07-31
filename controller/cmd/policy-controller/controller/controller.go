@@ -16,9 +16,9 @@ import (
 	"k8s.io/client-go/tools/cache"
 	"k8s.io/client-go/util/workqueue"
 
-	policyclientset "github.com/openshift/k8s-go/controller/pkg/generated/clientset/versioned"
-	policyinformers "github.com/openshift/k8s-go/controller/pkg/generated/informers/externalversions"
-	policylisters "github.com/openshift/k8s-go/controller/pkg/generated/listers/policy/v1alpha1"
+	policyclientset "github.com/openshift-talks/k8s-go/controller/pkg/generated/clientset/versioned"
+	policyinformers "github.com/openshift-talks/k8s-go/controller/pkg/generated/informers/externalversions"
+	policylisters "github.com/openshift-talks/k8s-go/controller/pkg/generated/listers/policy/v1alpha1"
 )
 
 // Controller is the controller implementation for HealthCheckPolicy resources

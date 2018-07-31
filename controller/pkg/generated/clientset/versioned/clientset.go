@@ -4,7 +4,7 @@ package versioned
 
 import (
 	glog "github.com/golang/glog"
-	policyv1alpha1 "github.com/openshift/k8s-go/controller/pkg/generated/clientset/versioned/typed/policy/v1alpha1"
+	policyv1alpha1 "github.com/openshift-talks/k8s-go/controller/pkg/generated/clientset/versioned/typed/policy/v1alpha1"
 	discovery "k8s.io/client-go/discovery"
 	rest "k8s.io/client-go/rest"
 	flowcontrol "k8s.io/client-go/util/flowcontrol"

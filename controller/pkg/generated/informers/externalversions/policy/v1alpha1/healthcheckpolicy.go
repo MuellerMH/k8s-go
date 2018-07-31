@@ -5,10 +5,10 @@ package v1alpha1
 import (
 	time "time"
 
-	policyv1alpha1 "github.com/openshift/k8s-go/controller/pkg/apis/policy/v1alpha1"
-	versioned "github.com/openshift/k8s-go/controller/pkg/generated/clientset/versioned"
-	internalinterfaces "github.com/openshift/k8s-go/controller/pkg/generated/informers/externalversions/internalinterfaces"
-	v1alpha1 "github.com/openshift/k8s-go/controller/pkg/generated/listers/policy/v1alpha1"
+	policyv1alpha1 "github.com/openshift-talks/k8s-go/controller/pkg/apis/policy/v1alpha1"
+	versioned "github.com/openshift-talks/k8s-go/controller/pkg/generated/clientset/versioned"
+	internalinterfaces "github.com/openshift-talks/k8s-go/controller/pkg/generated/informers/externalversions/internalinterfaces"
+	v1alpha1 "github.com/openshift-talks/k8s-go/controller/pkg/generated/listers/policy/v1alpha1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	watch "k8s.io/apimachinery/pkg/watch"

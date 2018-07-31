@@ -21,7 +21,7 @@ set -o pipefail
 SCRIPT_ROOT=$(dirname ${BASH_SOURCE})/..
 
 vendor/k8s.io/code-generator/generate-groups.sh all \
-  github.com/openshift/k8s-go/crd-go/pkg/generated github.com/openshift/k8s-go/crd-go/pkg/apis \
+  github.com/openshift-talks/k8s-go/crd-go/pkg/generated github.com/openshift-talks/k8s-go/crd-go/pkg/apis \
   policy:v1alpha1 \
   --output-base "${GOPATH}/src" \
   --go-header-file ${SCRIPT_ROOT}/hack/boilerplate.go.txt

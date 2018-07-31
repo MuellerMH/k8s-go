@@ -3,9 +3,9 @@
 package fake
 
 import (
-	clientset "github.com/openshift/k8s-go/controller/pkg/generated/clientset/versioned"
-	policyv1alpha1 "github.com/openshift/k8s-go/controller/pkg/generated/clientset/versioned/typed/policy/v1alpha1"
-	fakepolicyv1alpha1 "github.com/openshift/k8s-go/controller/pkg/generated/clientset/versioned/typed/policy/v1alpha1/fake"
+	clientset "github.com/openshift-talks/k8s-go/controller/pkg/generated/clientset/versioned"
+	policyv1alpha1 "github.com/openshift-talks/k8s-go/controller/pkg/generated/clientset/versioned/typed/policy/v1alpha1"
+	fakepolicyv1alpha1 "github.com/openshift-talks/k8s-go/controller/pkg/generated/clientset/versioned/typed/policy/v1alpha1/fake"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/watch"
 	"k8s.io/client-go/discovery"

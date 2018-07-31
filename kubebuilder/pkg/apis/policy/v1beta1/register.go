@@ -19,7 +19,7 @@ limitations under the License.
 // Package v1beta1 contains API Schema definitions for the policy v1beta1 API group
 // +k8s:openapi-gen=true
 // +k8s:deepcopy-gen=package,register
-// +k8s:conversion-gen=github.com/openshift/k8s-go/kubebuilder/pkg/apis/policy
+// +k8s:conversion-gen=github.com/openshift-talks/k8s-go/kubebuilder/pkg/apis/policy
 // +k8s:defaulter-gen=TypeMeta
 // +groupName=policy.k8s-go.openshift.org
 package v1beta1

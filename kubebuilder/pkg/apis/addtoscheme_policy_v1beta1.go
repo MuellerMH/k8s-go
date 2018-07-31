@@ -17,7 +17,7 @@ limitations under the License.
 package apis
 
 import (
-	"github.com/openshift/k8s-go/kubebuilder/pkg/apis/policy/v1beta1"
+	"github.com/openshift-talks/k8s-go/kubebuilder/pkg/apis/policy/v1beta1"
 )
 
 func init() {

@@ -17,7 +17,7 @@ limitations under the License.
 package controller
 
 import (
-	"github.com/openshift/k8s-go/kubebuilder/pkg/controller/healthcheckpolicy"
+	"github.com/openshift-talks/k8s-go/kubebuilder/pkg/controller/healthcheckpolicy"
 )
 
 func init() {

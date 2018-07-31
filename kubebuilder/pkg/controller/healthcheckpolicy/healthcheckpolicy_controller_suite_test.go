@@ -23,7 +23,7 @@ import (
 	"testing"
 
 	"github.com/onsi/gomega"
-	"github.com/openshift/k8s-go/kubebuilder/pkg/apis"
+	"github.com/openshift-talks/k8s-go/kubebuilder/pkg/apis"
 	"k8s.io/client-go/kubernetes/scheme"
 	"k8s.io/client-go/rest"
 	"sigs.k8s.io/controller-runtime/pkg/envtest"

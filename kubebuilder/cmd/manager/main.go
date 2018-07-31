@@ -19,8 +19,8 @@ package main
 import (
 	"log"
 
-	"github.com/openshift/k8s-go/kubebuilder/pkg/apis"
-	"github.com/openshift/k8s-go/kubebuilder/pkg/controller"
+	"github.com/openshift-talks/k8s-go/kubebuilder/pkg/apis"
+	"github.com/openshift-talks/k8s-go/kubebuilder/pkg/controller"
 	_ "k8s.io/client-go/plugin/pkg/client/auth/gcp"
 	"sigs.k8s.io/controller-runtime/pkg/client/config"
 	"sigs.k8s.io/controller-runtime/pkg/manager"
