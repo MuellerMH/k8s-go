@@ -30,23 +30,23 @@ func watchpods() {
 		fmt.Println(fmt.Errorf("Can't get config: %v", err))
 		os.Exit(1)
 	}
-	resyncinterval := time.Second * 30
+	resyncinterval := time.Second * 20
 	informerFactory := informers.NewSharedInformerFactory(clientset, resyncinterval)
 	podInformer := informerFactory.Core().V1().Pods()
 	podInformer.Informer().AddEventHandler(cache.ResourceEventHandlerFuncs{
-		AddFunc:    func(new interface{}) { fmt.Printf("Added new pod: %v", new) },
-		UpdateFunc: func(old, new interface{}) { fmt.Printf("Updated pod: old: %v, new: %v,", old, new) },
-		DeleteFunc: func(obj interface{}) { fmt.Printf("Deleted pod: %v", obj) },
+		AddFunc:    func(new interface{}) { fmt.Printf("INFORMER: add pod\n") },
+		UpdateFunc: func(old, new interface{}) { fmt.Printf("INFORMER: update pod\n") },
+		DeleteFunc: func(obj interface{}) { fmt.Printf("INFORMER: delete pod\n") },
 	})
 	go informerFactory.Start(wait.NeverStop)
 	for {
-		time.Sleep(time.Second * 10)
-		pod, err := podInformer.Lister().Pods("default").Get("webserver")
+		time.Sleep(time.Second * 5)
+		pod, err := podInformer.Lister().Pods("default").Get("shell")
 		if err != nil {
-			fmt.Println(fmt.Errorf("Can't get pod updates: %v", err))
+			fmt.Println(fmt.Errorf("Can't get updates on pod `shell`: %v", err))
 			continue
 		}
-		fmt.Printf("%v", pod)
+		fmt.Printf("Labels of pod `shell`: %v\n", pod.GetLabels())
 	}
 
 }
