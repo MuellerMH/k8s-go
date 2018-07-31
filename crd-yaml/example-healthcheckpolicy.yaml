@@ -4,3 +4,9 @@ metadata:
   name: example
 spec:
   podLabel: health-check-missing
+status:
+  statistics:
+    pods:
+      failed: 5
+      passed: 42
+  lastChecked: "So 29 Jul 2018 09:13:07 CEST"
