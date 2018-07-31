@@ -1,9 +1,5 @@
 # k8s-go
 
-Using and extending the Kubernetes API programmatically with Go.
+Using and extending the Kubernetes API programmatically with Go, see also the accompanying [slide deck](https://301.sh/2018-gopherconuk-slides).
 
-Make sure to have [dep](https://github.com/golang/dep) installed and execute the following command to get the dependencies in each scenario:
 
-```bash
-$ dep ensure -v
-```
