@@ -1,4 +1,0 @@
-apiVersion: "policy.k8s-go.openshift.org/v1beta1"
-kind: "HealthCheckPolicy"
-metadata:
-  name: "example"

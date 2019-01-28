@@ -1,3 +1,0 @@
-apiVersion: policy.k8s-go.openshift.org/v1beta1
-kind: HealthCheckPolicy
-projectName: app-operator
